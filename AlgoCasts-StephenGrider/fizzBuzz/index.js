@@ -34,4 +34,4 @@ function fizzBuzz(n) {
   }
 }
 
-module.exports = fizzBuzz;
+module.exports = fizzBuzz
