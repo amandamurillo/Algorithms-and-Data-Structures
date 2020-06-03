@@ -32,7 +32,6 @@ for (let char of str) {
   /* Loop 2 : Object loop
   loop thru charMap to find greatest value, return key pair
   */
-
   for(let char in charMap) {
     if (charMap[char] > max) {
       max = charMap[char];
@@ -42,3 +41,5 @@ for (let char of str) {
   }
 return maxChar;
 }
+
+module.exports = maxChar;
