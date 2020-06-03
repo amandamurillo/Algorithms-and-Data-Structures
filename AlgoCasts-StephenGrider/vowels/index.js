@@ -21,3 +21,14 @@ function vowels(str) {
   }
   return count;
 }
+
+module.exports = vowels;
+
+
+//Solution 2 : Regex
+
+// function vowels(str) {
+//   const matches = str.match(/[aeiou]/gi)
+//   //conditional
+//   return matches ? matches.length : 0;
+// }
