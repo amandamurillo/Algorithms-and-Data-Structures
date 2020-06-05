@@ -59,21 +59,38 @@ class LinkedList {
   }
 
   removeLast() {
-    if(!this.head) {
+    if (!this.head) {
       return
     }
-    if(!this.head.next) {
+    if (!this.head.next) {
       this.head = null;
       return;
     }
 
     let previous = this.head;
     let node = this.head.next;
-    
     while (node.next) {
-      previous.next = null;
+      previous = node;
+      node = node.next;
+    }
+    previous.next = null;
+  }
+
+  insertLast(data) {
+    const last = this.getLast();
+
+    if (last) {
+      //there are some existing nodes in our chain
+      last.next = new Node(data);
+    } else {
+      //the chain is empty, assign to head node
+      this.head = new Node(data);
     }
   }
+
+  
+
+
 
 
 
